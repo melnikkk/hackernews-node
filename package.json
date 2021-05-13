@@ -1,0 +1,24 @@
+{
+  "name": "hackernews-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/melnikkk/hackernews-node.git"
+  },
+  "keywords": [],
+  "author": "https://github.com/melnikkk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/melnikkk/hackernews-node/issues"
+  },
+  "homepage": "https://github.com/melnikkk/hackernews-node#readme",
+  "dependencies": {
+    "apollo-server": "^2.24.0",
+    "graphql": "^15.5.0"
+  }
+}
