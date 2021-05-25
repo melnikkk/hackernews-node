@@ -11,8 +11,31 @@ async function main() {
 	});
 
 	const allLinks = await prisma.link.findMany();
+	console.log(allLinks)
 
-	console.log(allLinks);
+	const onlyLink = await prisma.link.findUnique({
+		where: {
+			id: 0
+		}
+	});
+	console.log(onlyLink)
+
+	const updateLink = await prisma.link.update({
+		where: {
+			id: 0
+		},
+		data: {
+			description: 'link created from prisma',
+			url: 'www.prismalink.com',
+		}
+	});
+	console.log(updateLink)
+
+	const deleteLink = await prisma.link.delete({
+		where: {
+			id: 0
+		}
+	});
 };
 
 main()

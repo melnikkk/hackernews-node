@@ -1,52 +1,55 @@
 const fs = require('fs');
 const path = require('path');
 const { ApolloServer } = require('apollo-server');
-
-let links = [
-	{
-		id: 'link-0',
-		description: 'My GitHub profile',
-		url: 'https://github.com/melnikkk',
-	}
-]
-
-let idCount = links.length;
+const { PrismaClient } = require('@prisma/client');
 
 const resolvers = {
 	Query: {
 		info: () => 'This is the API of a HackerNews Clone',
-		feed: () => links,
-		link: (parent, args) => links.find(({ id }) => id === args.id),
+		feed: async (parent, args, context) => context.prisma.link.findMany(),
+		link: async (parent, args, context) => {
+			const id = Number(args.id);
+			return context.prisma.link.findUnique({
+				where: {
+					id
+				}
+			})
+		},
 	},
 
 	Mutation: {
-		post: (parent, args) => {
-			const link = {
-				id: `link-${idCount++}`,
-				description: args.description,
-				url: args.url,
-			}
-
-			links.push(link);
-
-			return link;
+		post: async (parent, args, context) => {
+			return context.prisma.link.create({
+				data: {
+					url: args.url,
+					description: args.description,
+				},
+			});
 		},
-		updateLink: (parent, args) => {
-			const updatableLink = links.find(({ id }) => id === args.id);
-
-			if (updatableLink) {
-				return {
-					...updatableLink,
-					description: args.description ? args.description : updatableLink.description,
-					url: args.url ? args.url : updatableLink.url,
+		updateLink: async (parent, args, context) => {
+			const id = Number(args.id);
+			return context.prisma.link.update({
+				where: {
+					id,
+				},
+				data: {
+					url: args.url,
+					description: args.description,
+				},
+			});
+		},
+		deleteLink: async (parent, args, context) => {
+			const id = Number(args.id);
+			return context.prisma.link.delete({
+				where: {
+					id,
 				}
-			}
+			});
 		},
-		deleteLink: (parent, args) => {
-			return links.filter(({ id }) => args.id === id)[0];
-		}
 	}
 }
+
+const prisma = new PrismaClient();
 
 const server = new ApolloServer({
 	typeDefs: fs.readFileSync(
@@ -54,6 +57,9 @@ const server = new ApolloServer({
 		'utf8'
 	),
 	resolvers,
+	context: {
+		prisma,
+	},
 });
 
 server.listen().then(({ url }) => console.log(`Server is running on ${url}`));
