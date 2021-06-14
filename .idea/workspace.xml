@@ -2,18 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a068aa09-c37e-4ce2-89b8-f926393ad500" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/prisma/migrations/20210525132125_add_user_model/migration.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resolvers/Link.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resolvers/Mutation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resolvers/Query.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resolvers/User.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/dev.db-journal" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/prisma/migrations/20210613172357_add_vote_model/migration.sql" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resolvers/Subscription.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/resolvers/Vote.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prisma/dev.db" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/dev.db" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resolvers/Link.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resolvers/Link.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resolvers/Mutation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resolvers/Mutation.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/src/schema.graphql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -69,6 +67,9 @@
       <workItem from="1621883240568" duration="17877000" />
       <workItem from="1622222181453" duration="3181000" />
       <workItem from="1622899043627" duration="762000" />
+      <workItem from="1623049729653" duration="2122000" />
+      <workItem from="1623603328299" duration="4872000" />
+      <workItem from="1623664680025" duration="66000" />
     </task>
     <servers />
   </component>
