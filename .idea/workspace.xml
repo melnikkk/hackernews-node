@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a068aa09-c37e-4ce2-89b8-f926393ad500" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/prisma/dev.db-journal" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/prisma/migrations/20210613172357_add_vote_model/migration.sql" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resolvers/Subscription.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/resolvers/Vote.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/prisma/dev.db" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/dev.db" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prisma/schema.prisma" beforeDir="false" afterPath="$PROJECT_DIR$/prisma/schema.prisma" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resolvers/Link.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resolvers/Link.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/resolvers/Mutation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resolvers/Mutation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/resolvers/Query.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/resolvers/Query.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/schema.graphql" beforeDir="false" afterPath="$PROJECT_DIR$/src/schema.graphql" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
